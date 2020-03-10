@@ -1,0 +1,56 @@
+
+
+h3{
+    color: orange;
+}
+p{
+    color: orange;
+}
+
+  
+  #item_cima {
+   float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: orange;
+  }
+  #lista_lado {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    height: 100%;
+    background-color: #333;
+    top: 22%;
+    left: 0;
+    right: 0;
+    position: absolute;;
+  }
+  #frame_telas{
+    position: fixed;
+    top: 9%;
+    left: 10%;
+    height: 90%;
+    width: 90%;
+   
+  }
+ 
+  table, th, td {
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+  #data_selecionada{
+    background-color: white;
+    color: orange;
+    border-radius: 20px;
+  }

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador Financeiro</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link href="css/overwrite.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/set1.css" />
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="estiloFinanca.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- =======================================================
+    Theme Name: eNno
+    Theme URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+        <a class="navbar-brand" href="index.html"><span><img src="viewLogo.png" style="height: 10%;"></span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <div class="menu">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="services.html">Serviços</a></li>
+            <li role="presentation"><a href="blog.html">Simulador</a></li>
+            <li role="presentation"><a href="portfolio.html">Entrar</a></li>
+            <li role="presentation"><a href="contact.html">Cadastrar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="blogs">
+          <div class="text-center">
+            <h2>Simulador Financeiro</h2>
+            <p>Antes de investir em nossa empresa primeiro veja<br> como vai ser seu  lucro se fizer isto!
+            </p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="page-header">
+          <div class="blog">
+         
+            <img src="img/01.jpg" class="img-responsive" alt="" />
+
+            <span style="font-size: 30px;color: orange;  float: left;">Quantos Usuários ativos na sua aplicação?</span>
+            <input type="number" id="usuarios"placeholder="Por dia">
+            <br>
+            <br>
+            <span style="font-size: 30px;color: orange; ">Quantos carros ativos?</span>
+            <input type="number" id="carro" placeholder="Frota"> 
+            <select name="" id="plano">
+              <option value="escolga um plano">-Escolha um plano-</option>
+              <option value="500">Plano Bronze</option>
+              <option value="1000">Plano Prata</option>
+              <option value="2000">Plano Ouro</option>
+          </select>
+         <center><div id="div_resul" style="display: none;">
+
+            <b>Por mês:</b>R$<span id="mes"></span>
+            <br>
+            <b>Custo dos aparelhos (R$30/cada):</b> R$<span id="aparelho"></span>
+            <br>
+            <b>Aumento no número de usuários(por dia):</b><span id="u"></span>
+        </div></center>
+        <br> <br><br><br>
+       <center> <button onclick="conta()"  style="border-radius: 20px; height: 40px; width: 400px; background-color: orange; color: white;">Calcular</button></center>
+      
+
+          </div>
+        </div>
+        
+      </div>
+
+
+
+
+      <div class="col-md-4">
+        <form class="form-search">
+          
+        </form>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>Planos</strong>
+          </div>
+          <div class="panel-body">
+            <div id="div_prata" style="height:250px;width: 250px;  background-color: white;border-radius: 20px;border-style: solid; border-color: orange;">
+              <center><p style="font-size: 20px;"><b> Plano Bronze</b></p></center>
+              <center><img src="Bronze.png" style="width: 50px;height: 50px;"></center>
+      
+              <div style="color: black; margin-left: 20px;"> Esse plano so abrange a área do grande ABC e aumenta seus usuários ativos em 
+                <br><br>
+                  <center><span style="font-size: 60px; color: orange;">5%</span></center>
+                  
+                
+                  </div>
+          
+          
+          </div>
+           
+            
+          </div>
+          <div class="panel-body">
+            <div id="div_prata" style="height:250px;width: 250px;  background-color: white;border-radius: 20px;border-style: solid; border-color: orange;">
+              <center><p style="font-size: 20px;"><b> Plano Prata</b></p></center>
+              <center><img src="prata.png" style="width: 50px;height: 50px;"></center>
+      
+              <div style="color: black; margin-left: 20px;">Abrange a cidade de São Paulo e aumenta seus usuários ativos em 
+                <br><br>
+                  <center><span style="font-size: 60px; color: orange;">15%</span></center>
+                  
+                
+                  </div>
+          
+          
+          </div>
+        
+          </div>
+          <div class="panel-body">
+            <div id="div_prata" style="height:250px;width: 250px;  background-color: white;  border-radius: 20px; border-style: solid; border-color: orange;"><center><p style="font-size: 20px;"><b> Plano Ouro</b></p></center>
+              <center><img src="ouro.png" style="width: 50px;height: 50px;"></center>
+              <div style="color: black;margin-left: 20px ">Esse plano so abrange a área do estado de São Paulo e aumenta seuss usuários ativos em 
+                <br><br>
+                  <center><span style="font-size: 60px;color: orange;">30%</span></center>
+             </div>
+          
+          </div>
+          
+          </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+ 
+
+
+
+  <footer>
+    <footer>
+      <div class="inner-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 f-about">
+              <a href="index.html"><h1>View</h1></a>
+              <p> Descrição do View
+              </p>
+            </div>
+            
+            <div class="col-md-4 f-contact">
+              <h3 class="widgetheading">Entre em contato</h3>
+              <a href="#">
+                <p><i class="fa fa-envelope"></i> Partyu2k19@gmail.com</p>
+              </a>
+              <p><i class="fa fa-phone"></i> (11)94252-0561</p>
+         
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="last-div">
+      <div class="container">
+        <div class="row">
+          <div class="copyright">
+            &copy; eNno Theme. All Rights Reserved
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eNno
+              -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+  
+      
+      <a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+
+    </div>
+  </footer>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="js/fliplightbox.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script type="text/javascript">
+    $('.portfolio').flipLightBox()
+  </script>
+
+</body>
+
+</html>
+<script>
+  function conta (){
+      var total,usu,plan,total2;
+      usu = Number(usuarios.value);
+      plan = Number(plano.value);
+     total2 = Number(carro.value) * 30;
+      if(plan == 500){
+          total = usu * 0.05;
+          u.innerHTML = total.toFixed(0);
+          aparelho.innerHTML = total2;
+          mes.innerHTML = 500;
+          div_resul.style.display = 'block';
+      }
+      else if(plan == 1000){
+          total = usu * 0.15;
+          u.innerHTML = total.toFixed(0);
+          aparelho.innerHTML = total2;
+          mes.innerHTML = 1000;
+          div_resul.style.display = 'block';
+
+      }
+      else if(plan == 2000){
+          total = usu * 0.30;
+          u.innerHTML = total.toFixed(0);
+          aparelho.innerHTML = total2;
+          mes.innerHTML = 2000;
+          div_resul.style.display = 'block';
+         
+      }
+      else{
+         div_resul.style.display = 'none';
+         alert('Escolha um plano');
+      }
+
+
+  }
+</script>

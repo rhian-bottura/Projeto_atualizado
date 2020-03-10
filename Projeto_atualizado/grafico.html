@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+  
+    <canvas id="myChart" height="100%" ></canvas>
+  <br>
+   <select id="data_selecionada" style=" border-radius: 20px; width: 200px; height: 50px;">
+            <option value="">Ano</option>
+            <option value="">Mês</option>
+            <option value="">Dia</option>
+          
+           
+        </select>
+        <input type="text" name="" id="rua" placeholder="Nome da Rua" style=" border-radius: 20px; width: 200px; height: 50px; font-size: 25px;">
+    
+</body>
+</html>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Fevereiro', 'Março', 'Maio', 'abril', 'junho','julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+            datasets: [{
+             
+  
+                label: 'Rua Haddack lobo - Cerqueira césar-SP',
+                data: [10, 10, 37, 40, 20, 8,20,40,30,20,10,20],
+                backgroundColor: 'transparent',
+                borderColor: 'orange',
+                borderWidth: 3,
+            },
+            {
+             
+  
+             label: 'Praça Prof. Mario Bulcão - Vila California -SP',
+             data: [10, 30, 37, 40, 20, 40,20,39,33,25,15,40],
+             backgroundColor: 'transparent',
+             borderColor: 'black',
+             borderWidth: 3,
+         },
+         {
+             
+  
+             label: 'Rua Bell Alliance - Jardim SCS -SP',
+             backgroundColor: 'transparent',
+             data: [30, 12, 32, 43, 25, 30,20,30,60,60,50,40],
+             borderColor: 'red',
+             borderWidth: 3,
+          
+         },
+         {
+             
+  
+             label: 'Rua Pindoram - bairro Olimpico-SCS',
+             data: [10, 20, 27, 30, 25, 40,23,43,33,21,19,10],
+             backgroundColor: 'transparent',
+             borderColor: 'yellow',
+             borderWidth: 3,
+         }
+            
+        ]},
+        options: {
+            
+           
+            title: {
+            display: true,
+            text: 'Relatório indíce de Luminosidade das ruas(Lumens)'
+        }, 
+        scales: {
+            yAxes: [{
+                stacked: false,
+               
+            }]
+        }}
+    });
+    </script>
