@@ -45,7 +45,7 @@
         <div class="menu">
           <ul class="nav nav-tabs" role="tablist">
             <li role="presentation"><a href="index.html">Home</a></li>
-            <li role="presentation"><a href="services.html">Serviços</a></li>
+   
             <li role="presentation"><a href="blog.html">Simulador</a></li>
             <li role="presentation"><a href="portfolio.html">Entrar</a></li>
             <li role="presentation"><a href="contact.html">Cadastrar</a></li>
@@ -76,7 +76,7 @@
       <div class="col-md-8">
         <div class="page-header">
           <div class="blog">
-         
+         <!--começa-->
             <img src="img/01.jpg" class="img-responsive" alt="" />
 
             <span style="font-size: 30px;color: orange;  float: left;">Quantos Usuários ativos na sua aplicação?</span>
@@ -108,9 +108,9 @@
         
       </div>
 
+      <!-- termina a parte do calculo-->
 
-
-
+<!-- comeÇa a parte dos planos-->
       <div class="col-md-4">
         <form class="form-search">
           
@@ -171,18 +171,18 @@
   </div>
   
 
- 
+ <!-- acaba os planos-->
 
 
 
   <footer>
     <footer>
-      <div class="inner-footer">
+      <div class="inner-footer" style="border-style: solid;">
         <div class="container">
           <div class="row">
             <div class="col-md-4 f-about">
               <a href="index.html"><h1>View</h1></a>
-              <p> Descrição do View
+              <p> O objetivo da nossa equipe é possibilitar que os motoristas da cidade de São Paulo possam optar pelas vias mais seguras, evitando acidentes, assaltos e outros impecílios.Com a nossa plataforma voltada para a aquisição de dados de iluminação das ruas da cidade de São Paulo para que possam ser consultados a fim de informar motoristas quais trechos estão pouco iluminados.
               </p>
             </div>
             
@@ -202,16 +202,15 @@
     <div class="last-div">
       <div class="container">
         <div class="row">
-          <div class="copyright">
-            &copy; eNno Theme. All Rights Reserved
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact. 
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eNno
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; View Theme. All Rights Reserved
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact. 
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eNno
+            -->
+            Designed by View
             </div>
           </div>
         </div>
@@ -242,10 +241,13 @@
 
 </body>
 
-</html>
+</html><!-- script dos calculos-->
 <script>
   function conta (){
-      var total,usu,plan,total2;
+      var total
+      var usu
+      var plan
+      var total2;
       usu = Number(usuarios.value);
       plan = Number(plano.value);
      total2 = Number(carro.value) * 30;
